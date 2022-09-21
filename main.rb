@@ -42,3 +42,14 @@ def decode_word (morse)
 end
 # puts(decode_word("-... -.- -.."))
 
+def decode(statement)
+    sentence = ""
+    for word in statement.split("   ")
+        sentence += " " + decode_word(word)
+    end
+    sentence
+end
+
+
+puts(decode("-- -.--   -. .- -- ."))
+
